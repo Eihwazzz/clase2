@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<!--<script src="js/jquery-1.12.2.min.js"></script>-->
+	<script src="Validaciones.js"></script>
+	<script>
+	$(document).ready(function(){
+		
+		$("#divRegistro").hide();
+		
+		$("#btnLogin").click(function(){
+			$("#divLogin").show();
+			$("#divRegistro").hide();
+		});
+		$("#btnRegistro").click(function(){
+			$("#divRegistro").show();
+			$("#divLogin").hide();
+		});
+	});
+	</script>
+	<title>Document</title>
+</head>
+<body id="body1">
+	<center>
+		<input type="button" name="btnLogin" id="btnLogin" value="Login"/>
+		<input type="button" name="btnRegistro" id="btnRegistro" value="Registro"/>
+	</center>
+	<center>
+	<div id="divLogin">
+	<form onsubmit="ValidarLogin(); return false;">
+		<table>
+		<th>LOGIN</th>
+			<tr><td>Usuario</td><td><input type="text" name="txtUser" id="txtUser"/></td></tr>
+			<tr><td>Password</td><td><input type="text" name="txtPass" id="txtPass"/></td></tr>
+		</table>
+		<input type="submit" value="Logear"/>
+	</form>
+	</div>
+	</center>
+	<center>
+	<div id="divRegistro">
+	<form onsubmit="ValidarRegistro(); return false;">
+		<table>
+		<th>REGISTRO</th>
+			<tr><td>Usuario</td><td><input type="text" name="txtUser2" id="txtUser2"/></td></tr>
+			<tr><td>Password</td><td><input type="text" name="txtPass2" id="txtPass2"/></td></tr>
+			<tr><td>Confirm Password</td><td><input type="text" name="txtPass22" id="txtPass22"/></td></tr>
+		</table>
+		<input type="submit" value="Registrar"/>
+	</form>
+	</div>
+	</center>
+</body>
+</html>
